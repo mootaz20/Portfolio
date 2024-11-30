@@ -1,0 +1,27 @@
+.skill-card {
+    transition: all 0.3s ease;
+}
+.icon-container {
+    transition: transform 0.3s ease-in-out;
+    background: rgb(214, 216, 248);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.skill-card:hover .icon-container {
+    transform: scale(1.14);
+}
+.skill-card h5 {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+.icon-container {
+    width: 80px;
+    height: 80px;
+}
+    
+.skill-card h5 {
+    font-size: 1rem;
+}
+}

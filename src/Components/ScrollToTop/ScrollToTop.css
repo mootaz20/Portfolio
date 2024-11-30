@@ -1,0 +1,17 @@
+.scrolToTop {
+    z-index: 999;
+}
+.scrolToTop button{
+    padding: 14px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+.scrolToTop button:hover{
+    opacity: 1;
+}
+@media screen and (max-width : 992px) {
+    .scrolToTop {
+        bottom: 5px !important;
+        right: 5px !important;
+    }
+}

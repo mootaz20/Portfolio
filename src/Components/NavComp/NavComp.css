@@ -1,0 +1,13 @@
+.navCom {
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+.navCom.stikcy {
+background-color: var(--primary-color) !important;
+}
+.navCom .cursor{
+    cursor: pointer;
+}

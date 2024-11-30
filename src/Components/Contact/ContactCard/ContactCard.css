@@ -1,0 +1,9 @@
+.contactCard {
+    cursor: pointer;
+}
+.contactCard .icon{
+    transition: all .5s ease;
+}
+.contactCard:hover .icon{
+    transform: translateY(-10px);
+} 

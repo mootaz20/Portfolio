@@ -1,0 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --primary-color: #3a6cf4;
+  --second-color : #000016; 
+}
+.txt-color{
+  color: var(--primary-color) !important;
+}
+.bg-second{
+  background-color: var(--second-color) !important;
+}
+.bg-color{
+  background-color: var(--primary-color) !important;
+}

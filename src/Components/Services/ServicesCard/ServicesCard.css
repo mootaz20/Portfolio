@@ -1,0 +1,12 @@
+.translate{
+    height: 400px;
+}
+.translate:hover{
+    cursor: pointer;
+}
+.translate .icon{
+    transition: all .5s ease;
+}
+.translate:hover .icon{
+    transform: translateY(-10px);
+}
