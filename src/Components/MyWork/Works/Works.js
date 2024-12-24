@@ -83,7 +83,7 @@ export const works = [
     img: "/assets/images/work20.png",
     techniques: ["Angular", "Fakestoreapi"],
     frameworks: ["bootstrap"],
-    demo: "https://mootaz20.github.io/test/products",
+    demo: "https://mootaz20.github.io/test/",
     isResponsive: true,
   },
   {
