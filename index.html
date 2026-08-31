@@ -1,10 +1,44 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/assets/images/linkIcon.png" />
+    <link rel="icon" type="image/png" href="/assets/images/linkIcon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mootaz Alhalak - Software Engineer</title>
+    <meta name="theme-color" content="#000016" />
+    <meta
+      name="description"
+      content="Mootaz Alhalak — Full-Stack Developer building production platforms with Angular, Node.js, NestJS and Parse Server. Security-minded engineering, backed by penetration testing training."
+    />
+    <meta property="og:title" content="Mootaz Alhalak — Full-Stack Developer" />
+    <meta
+      property="og:description"
+      content="Full-Stack Developer delivering production systems across energy, hospitality, HR and logistics. Angular · Node.js · NestJS · Parse Server · MongoDB."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Mootaz Alhalak — Full-Stack Developer</title>
+    <script>
+      // Apply the stored theme before first paint to avoid a flash.
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
