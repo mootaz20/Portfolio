@@ -7,7 +7,7 @@ import { security, profile } from "../data/content";
   not the headline of this portfolio.
 */
 const Security = () => (
-  <section className="section" style={{ paddingBlockStart: 0 }}>
+  <section className="section section--security">
     <div className="container">
       <motion.div
         className="sec-note"

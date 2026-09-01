@@ -1,12 +1,24 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FiMoon, FiSun, FiMenu, FiX, FiDownload } from "react-icons/fi";
+import {
+  FiMoon,
+  FiSun,
+  FiMenu,
+  FiX,
+  FiDownload,
+  FiSearch,
+  FiCommand,
+} from "react-icons/fi";
 import { navLinks, profile } from "../data/content";
 
-const Navbar = ({ theme, toggleTheme }) => {
+const isMac = () =>
+  typeof navigator !== "undefined" && /mac/i.test(navigator.platform || "");
+
+const Navbar = ({ theme, toggleTheme, openPalette }) => {
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
+  const [mac] = useState(isMac);
 
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 24);
@@ -68,19 +80,50 @@ const Navbar = ({ theme, toggleTheme }) => {
           </nav>
 
           <div className="nav__actions">
+            <button
+              className="nav__cmdk"
+              onClick={openPalette}
+              aria-label="Open command palette">
+              <FiSearch size={15} />
+              <span>Search</span>
+              <kbd>
+                {mac ? <FiCommand size={11} /> : "Ctrl"}
+                K
+              </kbd>
+            </button>
+
+            <button
+              className="icon-btn nav__cmdk-icon"
+              onClick={openPalette}
+              aria-label="Open command palette">
+              <FiSearch size={18} />
+            </button>
+
             <a
-              className="btn btn--primary btn--sm"
+              className="btn btn--primary btn--sm nav__resume"
               href={profile.cv.fullstack}
               download>
               <FiDownload size={15} />
               Resume
             </a>
+
             <button
               className="icon-btn"
               onClick={toggleTheme}
               aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}>
-              {theme === "dark" ? <FiSun size={18} /> : <FiMoon size={18} />}
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.span
+                  key={theme}
+                  className="nav__theme-icon"
+                  initial={{ opacity: 0, rotate: -70, scale: 0.6 }}
+                  animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                  exit={{ opacity: 0, rotate: 70, scale: 0.6 }}
+                  transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}>
+                  {theme === "dark" ? <FiSun size={18} /> : <FiMoon size={18} />}
+                </motion.span>
+              </AnimatePresence>
             </button>
+
             <button
               className="icon-btn nav__burger"
               onClick={() => setOpen((v) => !v)}
@@ -101,13 +144,16 @@ const Navbar = ({ theme, toggleTheme }) => {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}>
             <div className="nav__mobile-list">
-              {navLinks.map((link) => (
-                <a
+              {navLinks.map((link, i) => (
+                <motion.a
                   key={link.id}
                   href={`#${link.id}`}
-                  onClick={() => setOpen(false)}>
+                  onClick={() => setOpen(false)}
+                  initial={{ opacity: 0, x: -16 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.04 * i, duration: 0.3 }}>
                   {link.label}
-                </a>
+                </motion.a>
               ))}
               <a
                 href={profile.cv.fullstack}
