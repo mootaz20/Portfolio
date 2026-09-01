@@ -214,7 +214,7 @@ export const projects = [
     year: "2025",
     role: "Frontend Developer",
     ownership: "Sole frontend author",
-    status: "Delivered",
+    status: "In production",
     blurb:
       "Admin dashboard and public site for property rentals - the full booking lifecycle from unit availability search through payments, contracts and business reporting.",
     stack: [
