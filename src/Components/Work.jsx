@@ -71,8 +71,6 @@ const ProjectCard = ({ p, index, flash }) => {
         <span className="chip">{p.year}</span>
       </div>
 
-      {p.scale && <p className="pcard__scale">{p.scale}</p>}
-
       <div className="pcard__stack">
         {p.stack.map((s) => (
           <span className="chip" key={s}>

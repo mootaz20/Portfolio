@@ -124,7 +124,6 @@ export const projects = [
     status: "In production",
     blurb:
       "Field-operations control center for the telecom tower network: sites, generators, preventive maintenance, spare-part inventory and technician site access - with a no-code report builder and a two-way sync to an external inventory system.",
-    scale: "212 cloud functions - 68 data models - ~72k LOC",
     stack: [
       "Angular 21",
       "PrimeNG",
@@ -148,7 +147,6 @@ export const projects = [
     status: "In production",
     blurb:
       "Runs the full lifecycle of fuel-delivery trips and corrective maintenance across a national network of telecom sites - trips ingested from an external FCMS system, technicians filing site-access and visit forms offline in the field, then back-office validation and write-back to the source system.",
-    scale: "~90 cloud functions - 28 schemas - 19 dashboard pages - ~31k LOC",
     stack: [
       "TypeScript",
       "Parse Server 8",
@@ -172,7 +170,6 @@ export const projects = [
     status: "In production",
     blurb:
       "Plans, dispatches and validates field maintenance across the site network - task plans, a dynamic PM form builder with recursive sub-forms, site-access validation, and a schema-introspecting report builder that turns any domain class into tables, charts or geo views, plus multi-day task drafts so technicians do not lose work across sessions.",
-    scale: "Report builder ~3.1k LOC - PM form builder 903 lines - drafts & history ~1.9k LOC",
     stack: [
       "TypeScript",
       "Parse Server",
@@ -197,7 +194,6 @@ export const projects = [
     status: "In production",
     blurb:
       "The multi-tenant generalisation of SOA - same field-operations feature set (task plans, PM form builder, site access and validation, report builder), rebuilt to serve many companies from one deployment. What is new here: a decorator-driven backend framework with auto-generated Swagger, company and group scoping with block-cascade rules, bulk Excel import with a pre-commit review dialog, and a configurable external-API layer wired to SMIS and n8n.",
-    scale: "~30 domain classes - 30+ cloud-function modules - 25+ screens - ~36k LOC",
     stack: [
       "TypeScript",
       "Parse Server 9",
@@ -221,7 +217,6 @@ export const projects = [
     status: "Delivered",
     blurb:
       "Admin dashboard and public site for property rentals - the full booking lifecycle from unit availability search through payments, contracts and business reporting.",
-    scale: "~35 feature modules - 122 lazy-loaded standalone components",
     stack: [
       "Angular 19 (zoneless)",
       "Signals",
@@ -243,7 +238,6 @@ export const projects = [
     status: "In production",
     blurb:
       "Transport and tourist-delegation platform spanning an API, an admin dashboard and a public site - the piece I owned was HyperPay online payments, front to back.",
-    scale: "3 repositories - API, dashboard, public website",
     stack: [
       "Angular 17/18",
       "Node.js",
@@ -265,7 +259,6 @@ export const projects = [
     status: "In production",
     blurb:
       "Three-application Angular suite for an academic institute: an internal admin dashboard, a peer-reviewed scientific magazine portal and the public website - all bilingual with full RTL.",
-    scale: "91 commits - ~22k lines across three frontends",
     stack: ["Angular 18/19", "Signals", "PrimeNG", "Tailwind", "ExcelJS", "jsPDF"],
     tags: ["Frontend", "Education"],
     accent: "violet",
@@ -294,7 +287,6 @@ export const projects = [
     status: "MVP",
     blurb:
       "Three early-stage products taken from concept to a working MVP. Al-Basset is a bilingual product showroom with an admin CMS across seven content domains; Smart Station is a services marketplace with a service catalog and cart flow; General Assistant is an AI support gateway that handles client requests over real-time messaging before routing them to a human agent.",
-    scale: "3 products - public sites, admin CMS and AI gateway",
     stack: [
       "Angular 19",
       "Tailwind",

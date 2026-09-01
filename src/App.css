@@ -690,15 +690,6 @@
 
 [data-theme="dark"] .pcard__badge { color: color-mix(in srgb, var(--pc-tint) 55%, #ffffff); }
 
-.pcard__scale {
-  font-family: var(--font-mono);
-  font-size: 0.76rem;
-  color: var(--text-faint);
-  padding: 10px 0;
-  border-top: 1px dashed var(--border);
-  margin-bottom: 14px;
-}
-
 .pcard__stack { display: flex; flex-wrap: wrap; gap: 6px; }
 
 .pcard__link {
